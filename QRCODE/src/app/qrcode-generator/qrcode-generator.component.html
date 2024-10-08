@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>QR Code Generator</h2>
+    <input [(ngModel)]="qrText" placeholder="Enter text" class="input-field" />
+    <button (click)="generateQRCode()" class="generate-btn">Generate QR Code</button>
+    
+    <div *ngIf="qrCodeUrl">
+      <h3>Generated QR Code:</h3>
+      <img [src]="qrCodeUrl" alt="QR Code" />
+    </div>
+  </div>
+  
